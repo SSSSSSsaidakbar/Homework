@@ -1,0 +1,52 @@
+### Kitob qo‘shish
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Java Peshqadam",
+  "author": "Joshua Bloch",
+  "year": 2020
+}
+
+### Barcha kitoblarni olish
+GET http://localhost:8080/books
+
+### ID bo‘yicha kitobni olish
+GET http://localhost:8080/books/1
+
+### Kitobni yangilash
+PUT http://localhost:8080/books/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Effective Java",
+  "author": "Joshua Bloch",
+  "year": 2021
+}
+
+### ID bo‘yicha kitobni o‘chirish
+DELETE http://localhost:8080/books/1
+
+### Kitob qidirish (nomi yoki muallif bo‘yicha)
+GET http://localhost:8080/books/search?title=Java
+
+### Foydalanuvchi qo‘shish
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Saidakbar",
+  "email": "saidakbar@example.com"
+}
+
+### Barcha foydalanuvchilarni olish
+GET http://localhost:8080/users
+
+### ID bo‘yicha foydalanuvchini olish
+GET http://localhost:8080/users/1
+
+### ID bo‘yicha foydalanuvchini o‘chirish
+DELETE http://localhost:8080/users/1
